@@ -3881,28 +3881,17 @@ dialog :link{
   }
 }
 
-/* --- DARK MODE OVERRIDE --- */
-html {
-  filter: invert(1) hue-rotate(180deg);
-  background-color: #000 !important;
+/* --- DARK MODE --- */
+:root {
+  --toolbar-bg-color: #1a1a1a !important;
+  --toolbar-color: #f1f1f1 !important;
+  --sidebar-bg-color: #242424 !important;
+  --main-content-bg-color: #0d0d0d !important;
 }
-#viewerContainer {
-    background-color: #121212 !important;
-}
-::selection {
-    background: rgba(255, 255, 255, 0.3) !important;
-}
-
-
-/* --- DARK MODE OVERRIDE --- */
-html {
-  filter: invert(1) hue-rotate(180deg) !important;
-  background-color: #000 !important;
-}
-#viewerContainer {
-    background-color: #121212 !important;
-}
-::selection {
-    background: rgba(255, 255, 255, 0.3) !important;
-}
+body, #outerContainer { background-color: var(--main-content-bg-color) !important; }
+.toolbar, #toolbarContainer { background-color: var(--toolbar-bg-color) !important; border-bottom: 1px solid #333 !important; }
+#sidebarContainer { background-color: var(--sidebar-bg-color) !important; }
+.page { filter: invert(1) hue-rotate(180deg) brightness(0.8) contrast(1.2) !important; box-shadow: 0 0 15px rgba(0,0,0,0.8) !important; }
+.thumbnailImage { filter: invert(1) hue-rotate(180deg) !important; }
+.toolbarField, .dropdownToolbarButton select { background-color: #333 !important; color: #fff !important; border-color: #444 !important; }
 

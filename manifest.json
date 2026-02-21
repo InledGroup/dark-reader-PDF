@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Dark PDF Viewer Pro",
-  "version": "3.0.0",
-  "description": "Visualizador de PDF oficial con barra de herramientas en modo oscuro.",
+  "version": "4.1.1",
+  "description": "Visualizador de PDF oficial con tema oscuro nativo.",
   "permissions": [
     "activeTab",
     "tabs",
@@ -12,20 +12,37 @@
     "<all_urls>"
   ],
   "action": {
-    "default_title": "Abrir en modo oscuro"
+    "default_title": "Abrir en modo oscuro",
+    "default_icon": {
+      "16": "icons/darkreaderpdf.png",
+      "48": "icons/darkreaderpdf.png",
+      "128": "icons/darkreaderpdf.png"
+    }
   },
   "background": {
     "service_worker": "service-worker.js"
   },
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/darkreaderpdf.png",
+    "48": "icons/darkreaderpdf.png",
+    "128": "icons/darkreaderpdf.png"
   },
   "web_accessible_resources": [
     {
-      "resources": ["**/*"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "pdfjs/web/viewer.html",
+        "pdfjs/web/viewer.css",
+        "pdfjs/web/viewer.mjs",
+        "pdfjs/build/pdf.mjs",
+        "pdfjs/build/pdf.worker.mjs",
+        "pdfjs/web/images/*",
+        "pdfjs/web/locale/*",
+        "pdfjs/web/standard_fonts/*",
+        "pdfjs/web/cmaps/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }
