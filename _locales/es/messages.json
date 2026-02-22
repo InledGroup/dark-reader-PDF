@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Dark PDF Viewer Pro",
+    "description": "El nombre de la extensión."
+  },
+  "extensionDescription": {
+    "message": "Visualizador de PDF oficial con tema oscuro nativo.",
+    "description": "La descripción de la extensión."
+  },
+  "actionTitle": {
+    "message": "Abrir en modo oscuro",
+    "description": "Título para el botón de acción."
+  }
+}

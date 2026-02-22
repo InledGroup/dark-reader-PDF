@@ -8,7 +8,7 @@ chrome.action.onClicked.addListener((tab) => {
   }
 
   if (url) {
-    // Apuntamos a la ruta oficial anidada
+    // We point to the official nested path
     const viewerUrl = chrome.runtime.getURL('pdfjs/web/viewer.html') + '?file=' + encodeURIComponent(url);
     chrome.tabs.update(tab.id, { url: viewerUrl });
   }
