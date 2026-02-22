@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 250px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.1em;
+      margin-top: 0;
+      color: #ffcc00;
+    }
+    p {
+      font-size: 0.9em;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: background-color 0.2s;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    .btn-secondary {
+      background-color: #444;
+      color: #ccc;
+    }
+    .btn-secondary:hover {
+      background-color: #555;
+    }
+    #manual-check {
+      background: none;
+      color: #555;
+      font-size: 0.7em;
+      margin-top: 12px;
+      text-align: center;
+      width: 100%;
+      padding: 4px;
+    }
+    #manual-check:hover {
+      color: #888;
+    }
+    .version-tag {
+      font-weight: bold;
+      color: #ff9900;
+    }
+  </style>
+</head>
+<body>
+  <h2>Update Available!</h2>
+  <p>A newer version <span id="new-version" class="version-tag"></span> is available for Dark PDF Viewer Pro.</p>
+  
+  <div class="btn-container">
+    <button id="update-btn" class="btn-primary">Update Now</button>
+    <button id="proceed-btn" class="btn-secondary">Open PDF in Dark Mode</button>
+  </div>
+
+  <button id="manual-check">Check for updates...</button>
+
+  <script src="update.js"></script>
+</body>
+</html>
